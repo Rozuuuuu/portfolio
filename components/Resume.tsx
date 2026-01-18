@@ -19,28 +19,28 @@ export default function Resume() {
 
   const projects = [
     {
-      title: "Smart Personality Assistant",
+      title: "Buy@ndBuild",
       description:
-        "Developed a web-based personality assistant application using TypeScript and modern frontend technologies. Created an interactive interface that helps users understand their personality traits through engaging questionnaires and provides personalized insights based on their responses. Integrated with external APIs via RapidAPI to enhance functionality and data processing capabilities.",
-      technologies: ["TypeScript", "React", "Next.js", "CSS", "UI/UX Design", "RapidAPI"],
+        "Buy @nd Build Company is a versatile sales and service provider connecting buyers, sellers, agents, and referrers across various industries. We specialize in promoting and selling products and services through effective advertising and trusted partnership.",
+      technologies: ["NextJs", "NodeJs", "Supabase", "n8n", "Vercel"],
     },
     {
-      title: "E-Commerce Pet Adoption Platform",
+      title: "Gazbeat",
       description:
-        "Developed an e-commerce platform for pet adoption, offering a variety of pets and pet-related products. Implemented features such as user authentication, product listings, shopping cart functionality, and payment processing.",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
+        "Product service provider where users can see the products list of LPG Products and Mini Products. It includes inventory management features.",
+      technologies: ["React", "NodeJs", "Supabase", "GoDaddy"],
     },
     {
-      title: "Spell Checker Application",
+      title: "Café AI",
       description:
-        "Created a spell checker application using the Levenshtein distance algorithm to suggest correct words for misspelled inputs. Designed a user-friendly interface for inputting words and displaying suggested corrections.",
-      technologies: ["PHP", "HTML", "CSS", "JavaScript"],
+        "AI-Enhanced 2D Game Interactive Learning Environment for Coffee Shop simulation.",
+      technologies: ["NextJs", "Nodejs", "Supabase", "Python"],
     },
     {
-      title: "Point of Sales (POS) System",
+      title: "BistroEase POS",
       description:
-        "Developed a point of sales system resembling a retail counter for processing transactions. Implemented features such as product inventory management, sales tracking, and reporting functionalities.",
-      technologies: ["C#", ".NET Framework", "MySQL"],
+        "A user-friendly POS System for small cafes & Bistros.",
+      technologies: ["Android Studio", "XAML", "Java"],
     },
   ]
 

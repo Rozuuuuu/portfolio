@@ -4,38 +4,37 @@ import { motion } from "framer-motion"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 
 export default function Projects() {
   const projects = [
     {
-      title: "Smart Personality Assistant",
+      title: "Buy@ndBuild",
       description:
-        "An AI-powered application that analyzes user inputs to determine personality traits and provide personalized recommendations based on psychological profiles.",
-      technologies: ["TypeScript", "React", "Next.js", "CSS", "RapidAPI"],
-      github: "https://github.com/Rozuuuuu/smart-personality-assistant",
-      live: "https://smart-personality-assistant.vercel.app",
+        "Buy @nd Build Company is a versatile sales and service provider connecting buyers, sellers, agents, and referrers across various industries. We specialize in promoting and selling products and services through effective advertising and trusted partnership.",
+      technologies: ["NextJs", "NodeJs", "Supabase", "n8n", "Vercel"],
+      live: "https://buy-nd-build.vercel.app",
     },
     {
-      title: "E-Commerce Pet Adoption Platform",
-      description: "A web application for pet adoption with user authentication and payment integration.",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/yourusername/pet-adoption",
-      live: "https://pet-adoption-demo.com",
+      title: "Gazbeat",
+      description:
+        "Product service provider where users can see the products list of LPG Products and Mini Products. It includes inventory management features.",
+      technologies: ["React", "NodeJs", "Supabase", "GoDaddy"],
+      live: "https://gazbeat.com",
     },
     {
-      title: "Spell Checker Application",
-      description: "An application using the Levenshtein distance algorithm for spell checking and correction.",
-      technologies: ["PHP", "JavaScript"],
-      github: "https://github.com/yourusername/spell-checker",
-      live: "https://spell-checker-demo.com",
+      title: "Café AI",
+      description:
+        "AI-Enhanced 2D Game Interactive Learning Environment for Coffee Shop simulation.",
+      technologies: ["NextJs", "Nodejs", "Supabase", "Python"],
+      live: "https://v0-coffee-shop-game.vercel.app",
     },
     {
-      title: "Point of Sales (POS) System",
-      description: "A retail POS system for processing transactions and managing inventory.",
-      technologies: ["C#", ".NET Framework", "MySQL"],
-      github: "https://github.com/yourusername/pos-system",
-      live: "https://pos-system-demo.com",
+      title: "BistroEase POS",
+      description:
+        "A user-friendly POS System for small cafes & Bistros.",
+      technologies: ["Android Studio", "XAML", "Java"],
+      live: null,
     },
   ]
 
@@ -65,27 +64,19 @@ export default function Projects() {
                         </Badge>
                       ))}
                     </div>
-                    <div className="flex justify-between mt-auto">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        asChild
-                        className="bg-gray-700 text-white hover:bg-blue-600 hover:text-white transition-colors duration-300"
-                      >
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-2 h-4 w-4" /> GitHub
-                        </a>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        asChild
-                        className="bg-gray-700 text-white hover:bg-blue-600 hover:text-white transition-colors duration-300"
-                      >
-                        <a href={project.live} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                        </a>
-                      </Button>
+                    <div className="mt-auto">
+                      {project.live && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          asChild
+                          className="bg-gray-700 text-white hover:bg-blue-600 hover:text-white transition-colors duration-300 w-full"
+                        >
+                          <a href={project.live} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

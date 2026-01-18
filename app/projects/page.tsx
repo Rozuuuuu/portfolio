@@ -3,39 +3,38 @@
 import { motion } from "framer-motion"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 import PageWrapper from "@/components/PageWrapper"
 
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Smart Personality Assistant",
+      title: "Buy@ndBuild",
       description:
-        "An AI-powered application that analyzes user inputs to determine personality traits and provide personalized recommendations based on psychological profiles.",
-      technologies: ["TypeScript", "React", "Next.js", "CSS", "RapidAPI"],
-      github: "https://github.com/Rozuuuuu/smart-personality-assistant",
-      live: "https://smart-personality-assistant.vercel.app",
+        "Buy @nd Build Company is a versatile sales and service provider connecting buyers, sellers, agents, and referrers across various industries. We specialize in promoting and selling products and services through effective advertising and trusted partnership.",
+      technologies: ["NextJs", "NodeJs", "Supabase", "n8n", "Vercel"],
+      live: "https://buy-nd-build.vercel.app",
     },
     {
-      title: "E-Commerce Pet Adoption Platform",
-      description: "A web application for pet adoption with user authentication and payment integration.",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github: "https://github.com/yourusername/pet-adoption",
-      live: "https://pet-adoption-demo.com",
+      title: "Gazbeat",
+      description:
+        "Product service provider where users can see the products list of LPG Products and Mini Products. It includes inventory management features.",
+      technologies: ["React", "NodeJs", "Supabase", "GoDaddy"],
+      live: "https://gazbeat.com",
     },
     {
-      title: "Spell Checker Application",
-      description: "An application using the Levenshtein distance algorithm for spell checking and correction.",
-      technologies: ["PHP", "JavaScript"],
-      github: "https://github.com/yourusername/spell-checker",
-      live: "https://spell-checker-demo.com",
+      title: "Café AI",
+      description:
+        "AI-Enhanced 2D Game Interactive Learning Environment for Coffee Shop simulation.",
+      technologies: ["NextJs", "Nodejs", "Supabase", "Python"],
+      live: "https://v0-coffee-shop-game.vercel.app",
     },
     {
-      title: "Point of Sales (POS) System",
-      description: "A retail POS system for processing transactions and managing inventory.",
-      technologies: ["C#", ".NET Framework", "MySQL"],
-      github: "https://github.com/yourusername/pos-system",
-      live: "https://pos-system-demo.com",
+      title: "BistroEase POS",
+      description:
+        "A user-friendly POS System for small cafes & Bistros.",
+      technologies: ["Android Studio", "XAML", "Java"],
+      live: null,
     },
   ]
 
@@ -74,29 +73,20 @@ export default function ProjectsPage() {
                           </Badge>
                         ))}
                       </div>
-                      <div className="flex justify-between mt-auto">
-                        <motion.a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-3 py-2 rounded-md transition-colors duration-300"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Github className="w-4 h-4" />
-                          GitHub
-                        </motion.a>
-                        <motion.a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 px-3 py-2 rounded-md transition-colors duration-300"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Live Demo
-                        </motion.a>
+                      <div className="mt-auto">
+                        {project.live && (
+                          <motion.a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 px-3 py-2 rounded-md transition-colors duration-300 w-full"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            Live Demo
+                          </motion.a>
+                        )}
                       </div>
                     </CardContent>
                   </Card>
